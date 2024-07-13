@@ -1,14 +1,14 @@
-from ..model.llm.LLaMA import LLaMA
-from ..data.dataset.API_Bank import API_Bank
-from ..data.dataset.ToolEyes import ToolEyes
-from ..data.dataset.ToolTalk import ToolTalk
-from ..data.dataset.SoAy import SoAy
-from ..data.general_dataset import General_dataset
-from ..data.one_data import one_data
-
 import argparse
-import re
 import json
+import re
+
+from toolagent.data.dataset.API_Bank import API_Bank
+from toolagent.data.dataset.SoAy import SoAy
+from toolagent.data.dataset.ToolEyes import ToolEyes
+from toolagent.data.dataset.ToolTalk import ToolTalk
+from toolagent.data.general_dataset import General_dataset
+from toolagent.data.one_data import one_data
+from toolagent.model.llm.LLaMA import LLaMA
 
 
 def main(args):

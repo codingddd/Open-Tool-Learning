@@ -1,7 +1,7 @@
 import sys
 sys.dont_write_bytecode = True
 
-from otl.embedding import Embedder
+from toolagent.embedding.embedder import Embedder  # noqa: E402
 
 if __name__ == "__main__":
     embedder = Embedder("D:\PTM\gte-base-en-v1.5")

@@ -4,14 +4,13 @@
 
 from typing import Any, List
 
-from ._prototype import ChatAgent
-from ..model._prototype import FoundationLanguageModel
-from ..chat._prototype import BasicChatManagementModule
-from ..tool._prototype import BasicToolCallingModule
-from ..retrieval._prototype import BasicRetriever
-
-from ..chat import ChatManagementModule
-from ..tool import ToolCallingModule
+from toolagent.chat import ChatManagementModule
+from toolagent.chat._prototype import BasicChatManagementModule
+from toolagent.model._prototype import FoundationLanguageModel
+from toolagent.retrieval._prototype import BasicRetriever
+from toolagent.tool import ToolCallingModule
+from toolagent.tool._prototype import BasicToolCallingModule
+from toolagent.agents._prototype import ChatAgent
 
 
 class Agent(ChatAgent):

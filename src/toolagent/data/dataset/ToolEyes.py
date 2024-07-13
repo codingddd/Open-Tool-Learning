@@ -1,6 +1,7 @@
 import json
 import re
-from ...utils import read_JSON,write_JSON
+
+from toolagent.utils import read_JSON, write_JSON
 
 '''
 Pass in "scenario_data_zero_processed.json“ 

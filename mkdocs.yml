@@ -49,4 +49,14 @@ plugins:
   - search # built-in 搜索插件
 
 nav:
-  - 主页: index.md
+  - Home: 
+    - index.md
+    - ABOUT: HOME/ABOUT.md
+  - Quick Start:
+    - Installation: Quick_Start/installation.md
+    - User Guide: Quick_Start/user_guide.md
+  - Tutorial: Tutorial/tutorial.md
+  - API: API/API.md
+
+
+  

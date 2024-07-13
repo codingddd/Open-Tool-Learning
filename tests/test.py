@@ -1,8 +1,8 @@
 import sys
 sys.dont_write_bytecode = True
 
-import otl
-from otl.agents import Agent
+import toolagent  # noqa: E402, F401
+from toolagent.agents import Agent  # noqa: E402
 
 
 if __name__ == "__main__":

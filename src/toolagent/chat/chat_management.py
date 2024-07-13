@@ -1,4 +1,4 @@
-from ..chat._prototype import BasicChatManagementModule
+from toolagent.chat._prototype import BasicChatManagementModule
 
 class ChatManagementModule(BasicChatManagementModule):
     def __init__(self) -> None:

@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-from ..retrieval._prototype import BasicRetriever
-from ..vectorstore._prototype import BasicVectorStore
-from ..embedding._prototype import BasicEmbedder
+from toolagent.embedding._prototype import BasicEmbedder
+from toolagent.retrieval._prototype import BasicRetriever
+from toolagent.vectorstore._prototype import BasicVectorStore
+
 
 class BasicToolCallingModule:
     set_list: List[str]
@@ -15,6 +16,7 @@ class BasicToolCallingModule:
         self.set_list: List[str]
         self.tools_set: Dict[str, BasicToolPool]
         self.retriever: BasicRetriever
+
 
 class BasicToolPool:
     id_list: List[str]

@@ -1,7 +1,9 @@
-from ...utils import read_JSON,write_JSON
-import re
 import json
 import os
+import re
+
+from toolagent.utils import read_JSON, write_JSON
+
 
 class SoAy:
     def __init__(self,folder_path, tool_folder_path, prompt=""):

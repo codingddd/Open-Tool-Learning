@@ -1,5 +1,5 @@
 
-from ..tool._prototype import BasicTool
+from toolagent.tool._prototype import BasicTool
 
 class ToolPrompt:
     def __init__(self) -> None:

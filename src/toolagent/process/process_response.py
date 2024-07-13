@@ -4,13 +4,13 @@ import json
 
 def process_model_response(response):
     used_tool = re.search("\[[\s\S]*\]", response)
-    if used_tool != None:
+    if used_tool is not None:
         used_tool = re.search("\[[\s\S]*\]", response).group(0)
     else:
         return None
     try:
         tool = json.loads(used_tool)
-    except:
+    except:  # noqa: E722
         print("the format of model's response is wrong")
         tool = None
 
@@ -67,7 +67,7 @@ def process_api_bank_response(response):
         function_call["name"] = tool_name
         function_call["parameters"] = parameter_dict
 
-    except:
+    except:  # noqa: E722
         function_call = {}
 
     return function_call

@@ -1,7 +1,7 @@
 from typing import Dict, List
 
-from ..vectorstore._prototype import BasicVectorStore
-from ..embedding._prototype import BasicEmbedder
+from toolagent.vectorstore._prototype import BasicVectorStore
+from toolagent.embedding._prototype import BasicEmbedder
 
 
 class VectorStore(BasicVectorStore):

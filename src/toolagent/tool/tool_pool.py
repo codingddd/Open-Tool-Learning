@@ -1,13 +1,12 @@
 from typing import Dict, Set, Tuple
 
+from toolagent.embedding._prototype import BasicEmbedder
+from toolagent.prompt.tool import ToolPrompt
+from toolagent.tool._prototype import BasicTool, BasicToolPool
+from toolagent.utils import generate_random_key
+from toolagent.vectorstore import TensorStore
+from toolagent.vectorstore._prototype import BasicVectorStore
 
-from ..tool._prototype import BasicToolPool, BasicTool
-from ..embedding._prototype import BasicEmbedder
-from ..vectorstore._prototype import BasicVectorStore
-
-from ..vectorstore import TensorStore
-from ..utils import generate_random_key
-from ..prompt.tool import ToolPrompt
 
 class ToolPool(BasicToolPool):
     def __init__(self) -> None:

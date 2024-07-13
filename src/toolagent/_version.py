@@ -1,4 +1,7 @@
-from importlib.metadata import version as _package_version
+from importlib.metadata import version, PackageNotFoundError
 
 # Official PEP 396
-__version__ = _package_version('toolagent')
+try:
+    __version__ = version('toolagent')
+except PackageNotFoundError:
+    __version__ = "unknown version"

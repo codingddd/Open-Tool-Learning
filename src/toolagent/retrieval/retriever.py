@@ -1,26 +1,32 @@
 from typing import Any, List, Literal
+import heapq
+
+from toolagent.retrieval._prototype import BasicRetriever
+from toolagent.vectorstore._prototype import BasicVectorStore
 
 import numpy as np
 
-from ..retrieval._prototype import BasicRetriever
-from ..vectorstore._prototype import BasicVectorStore
 
-import heapq
 def top_k_keys_by_value(d, k):
-    return [key for key, value in heapq.nlargest(k, d.items(), key=lambda item: item[1])]
+    return [
+        key for key, value in heapq.nlargest(k, d.items(), key=lambda item: item[1])
+    ]
+
 
 class Retriever(BasicRetriever):
     def __init__(self) -> None:
         self.top_k: int = 1
         self.similarity: Literal["cosine"] = "cosine"
-    
+
     def retrieval(self, query_vector, vector_store: BasicVectorStore) -> str:
         score_dict = dict()
         for key_id in vector_store.storage:
-            score_dict[key_id] = self.calculate_score(query_vector, vector_store.storage[key_id])
+            score_dict[key_id] = self.calculate_score(
+                query_vector, vector_store.storage[key_id]
+            )
         return top_k_keys_by_value(score_dict, self.top_k)
 
-    def calculate_score(self,vector_1, vector_2):
+    def calculate_score(self, vector_1, vector_2):
         match self.similarity:
             case "cosine":
                 vec1 = np.array(vector_1)

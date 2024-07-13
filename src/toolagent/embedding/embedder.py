@@ -2,7 +2,8 @@ from typing import Any, List
 
 import torch
 
-from ..embedding._prototype import BasicLocalEmbedder
+from toolagent.embedding._prototype import BasicLocalEmbedder
+
 
 class LocalHuggingFaceEmbedder(BasicLocalEmbedder):
     def __init__(self, checkpoint_path) -> None:
